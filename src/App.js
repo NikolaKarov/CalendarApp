@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useSelector } from "react-redux";
+
+import "./App.css";
+import AddEventButton from "./components/AddEventButton";
+import Navigation from "./components/Navigation";
+import Schedule from "./components/Schedule";
+import AddEventForm from "./components/AddEventForm";
 
 function App() {
+  const toggle = useSelector((state) => state.toggle);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navigation toggle={toggle} />
+      <Schedule toggle={toggle} />
+      <AddEventButton toggle={toggle} />
+      <AddEventForm toggle={toggle} />
     </div>
   );
 }

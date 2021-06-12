@@ -1,0 +1,58 @@
+.day {
+  background-color: #ff990060;
+  border-radius: 4px;
+  margin: 5px auto;
+  border: 1px solid rgb(212, 212, 212);
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+}
+
+.day:hover {
+  transform: scale(1.03);
+  background-color: #ff990094;
+  transition: 0.5s;
+  box-shadow: 0 0 2px 0px;
+}
+
+.day-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210px;
+  padding: 10px 10px;
+  font-size: 20px;
+  border-right: 1px solid rgb(212, 212, 212);
+}
+
+.day-title-number {
+  padding: 0 10px;
+  border-left: 1px solid #8d8d8d;
+  border-right: 1px solid #8d8d8d;
+}
+
+.day-title-weekday {
+  padding: 0px 5px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.day-content {
+  width: 100%;
+}
+
+.day-content-note {
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.day-content-note-time {
+  padding: 5px;
+  border-right: 1px solid #ff990060;
+}
+
+.day-content-note-name {
+  padding: 5px;
+}
